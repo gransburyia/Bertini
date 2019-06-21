@@ -1,0 +1,110 @@
+Number of variables: 2
+Variables:  y1 y2
+Rank: 2
+-------------------------
+Solution 0 (path number 0)
+Estimated condition number: 1.422249408224562e+00
+Function residual: 6.770927948878313e-12
+Latest Newton residual: 6.788922153200660e-18
+T value at final sample point: 5.820766091346741e-12
+Maximum precision utilized: 52
+T value of first precision increase: 0.000000000000000e+00
+Accuracy estimate, internal coordinates (difference of last two endpoint estimates):  4.433203287114229e-12
+Accuracy estimate, user's coordinates (after dehomogenization, if applicable):  4.433203287114229e-12
+Cycle number: 1
+2.354544106081899e-01 4.337994508536581e-13
+2.058683138466477e-01 -1.477607428982915e-12
+Paths with the same endpoint, to the prescribed tolerance:  
+Multiplicity: 1
+-------------------------
+Solution 1 (path number 1)
+Estimated condition number: 1.622981115831780e+00
+Function residual: 1.19407236124645e-11
+Latest Newton residual: 1.46895402776984e-39
+T value at final sample point: 5.820766091346740e-12
+Maximum precision utilized: 128
+T value of first precision increase: 2.937500059612344e-01
+Accuracy estimate, internal coordinates (difference of last two endpoint estimates):  9.523120151459990e-12
+Accuracy estimate, user's coordinates (after dehomogenization, if applicable):  9.523120151459990e-12
+Cycle number: 1
+0.1862125918304570157416416403390140459107e0 0.9764816281319679873774249305229520315946e-1
+-0.1072304410728876681730809693508213962077e0 0.3613786682564621638063358547975192172327e0
+Paths with the same endpoint, to the prescribed tolerance:  
+Multiplicity: 1
+-------------------------
+Solution 2 (path number 6)
+Estimated condition number: 2.341530674844094e+00
+Function residual: 9.34060393872784e-12
+Latest Newton residual: 2.58091332865025e-30
+T value at final sample point: 5.820766091346740e-12
+Maximum precision utilized: 96
+T value of first precision increase: 5.468750054644340e-01
+Accuracy estimate, internal coordinates (difference of last two endpoint estimates):  7.506658776891390e-12
+Accuracy estimate, user's coordinates (after dehomogenization, if applicable):  7.506658776891390e-12
+Cycle number: 1
+-0.124642330068922686696697051245e0 -0.371513097966741708514009191751e0
+0.144842608530756020692836473135e0 -0.131713537528360387234611426312e0
+Paths with the same endpoint, to the prescribed tolerance:  
+Multiplicity: 1
+-------------------------
+Solution 3 (path number 7)
+Estimated condition number: 1.201836540011505e+00
+Function residual: 8.45675968734133e-12
+Latest Newton residual: 1.56569864294405e-39
+T value at final sample point: 5.820766091346740e-12
+Maximum precision utilized: 128
+T value of first precision increase: 3.781250059612347e-01
+Accuracy estimate, internal coordinates (difference of last two endpoint estimates):  3.430448936191580e-12
+Accuracy estimate, user's coordinates (after dehomogenization, if applicable):  3.430448936191580e-12
+Cycle number: 1
+-0.6166206538725654678148941045331179846475e-1 -0.4209647971559349726454101315330962021500e0
+-0.3747447057331438692139281007326127193723e-1 0.4144335836261520322931525043876867242011e0
+Paths with the same endpoint, to the prescribed tolerance:  
+Multiplicity: 1
+-------------------------
+At tol=1.000000000000e-10, there appear to be 4 solutions.
+
+
+*************** input file needed to reproduce this run ***************
+
+CONFIG
+
+UserHomotopy: 1;
+RandomSeed: 1561123200;
+
+END;
+
+INPUT
+
+variable y1,y2;
+function f0,f1;
+pathvariable t;
+parameter s;
+constant a,b,alpha,beta,n;
+constant gamma;
+gamma=7.960600812907368866967162718955792913030552605977189573951782992431629932206571595236043252036896577499201772909590875409813237101658522801565012896812309028382693240225340221425260741026703362313355897264325709141979190330096691527325577096113771456232069658315478247099647904103349321893589811723956162096337e-1+I*8.414664177596202637443471297239102635428517208751846743520606679135684828258846487947266220962082817144521236872021632354390895713478209035749329643155033629083165593575123627643205819554022677611645763054605355099618247417923599425957642812606829651548747730799006019794346962508107974949243904698020491593922e-1;
+alpha=1/2;
+beta=1/3;
+a=0;
+b=1;
+n=1;
+s=t;
+gamma_t=(gamma)^2*t+(1-t);
+h_t=gamma*t*((b-a)/n+1)+(1-t)*((b-a)/n+2);
+y_1=(1-t)*y2+(gamma^2)*beta*t;
+y_2=beta*(1-t);
+y0=alpha;
+f0=gamma_t*(y0-2*y1)+y_1-(h_t)^2*(2*y1^3);
+f1=gamma_t*(y1-2*y2)+y_2-(h_t)^2*(2*y2^3);
+
+END;
+
+
+*************** version information ***************
+Bertini(TM) v1.6
+GMP v6.0.0, MPFR v3.1.2
+
+Authors:
+D.J. Bates, J.D. Hauenstein,
+A.J. Sommese, C.W. Wampler
+

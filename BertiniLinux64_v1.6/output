@@ -1,0 +1,488 @@
+
+Path number 0:
+Starting with:
+time: <1.0000000000e+00 0.0000000000e+00>
+Point: <3.041369100863983e-01 2.081668171172169e-17> <2.535413263349994e-01 1.387778780781446e-17> 
+H(Point, time):
+     <1.249000902703301e-16 -1.110223024625157e-16> <2.478469306419771e-02 -4.465718832834319e-01> 
+
+
+Increase Prec (refine): 52 to 64 (0)
+Change Prec (success): 64 to 96 (98)
+Change Prec (success): 96 to 64 (217)
+Decrease Prec (success): 64 to 52 (228)
+Increase Prec (success): 52 to 64 (442)
+Decrease Prec (success): 64 to 52 (528)
+Increase Prec (success): 52 to 64 (754)
+Decrease Prec (success): 64 to 52 (840)
+Increase Prec (success): 52 to 64 (1058)
+Decrease Prec (success): 64 to 52 (1144)
+Increase Prec (success): 52 to 64 (1362)
+Decrease Prec (success): 64 to 52 (1448)
+Increase Prec (success): 52 to 64 (1666)
+Decrease Prec (success): 64 to 52 (1752)
+Increase Prec (success): 52 to 64 (1970)
+Decrease Prec (success): 64 to 52 (2056)
+Increase Prec (success): 52 to 64 (2282)
+Decrease Prec (success): 64 to 52 (2368)
+Increase Prec (success): 52 to 64 (2594)
+Decrease Prec (success): 64 to 52 (2680)
+numSteps = 2816
+numSteps = 26
+numSteps = 4
+numSteps = 1
+numSteps = 1
+numSteps = 1
+numSteps = 1
+numSteps = 1
+numSteps = 1
+numSteps = 1
+numSteps = 1
+numSteps = 1
+numSteps = 1
+numSteps = 1
+numSteps = 1
+numSteps = 1
+numSteps = 1
+numSteps = 1
+
+Ending with
+time: <0.0000000000e+00 0.0000000000e+00>
+Point: <2.354544106081899e-01 4.337994508536581e-13> <2.058683138466477e-01 -1.477607428982915e-12> 
+Orig f(Point, time):
+     <6.794564910705958e-13 -3.643869183668331e-12> <-5.687117443642364e-14 6.770689105136914e-12> 
+||H(Point, time)||: 6.770927948878313e-12
+
+_____________________________________________________
+
+Path number 1:
+Starting with:
+time: <1.0000000000e+00 0.0000000000e+00>
+Point: <3.041369100863983e-01 2.081668171172169e-17> <-1.267706631674997e-01 5.460882741093998e-01> 
+H(Point, time):
+     <1.249000902703301e-16 -1.110223024625157e-16> <2.478469306419795e-02 -4.465718832834317e-01> 
+
+
+Increase Prec (refine): 52 to 64 (0)
+Change Prec (success): 64 to 96 (98)
+Change Prec (success): 96 to 64 (217)
+Decrease Prec (success): 64 to 52 (228)
+Increase Prec (success): 52 to 64 (434)
+Decrease Prec (success): 64 to 52 (520)
+Increase Prec (success): 52 to 64 (738)
+Decrease Prec (success): 64 to 52 (824)
+Increase Prec (success): 52 to 64 (1042)
+Decrease Prec (success): 64 to 52 (1128)
+Increase Prec (success): 52 to 64 (1346)
+Decrease Prec (success): 64 to 52 (1432)
+Increase Prec (success): 52 to 64 (1650)
+Decrease Prec (success): 64 to 52 (1736)
+Increase Prec (success): 52 to 64 (1954)
+Decrease Prec (success): 64 to 52 (2040)
+Increase Prec (success): 52 to 64 (2258)
+Decrease Prec (success): 64 to 52 (2344)
+Increase Prec (success): 52 to 64 (2562)
+Decrease Prec (success): 64 to 52 (2648)
+Increase Prec (success): 52 to 64 (2866)
+Change Prec (success): 64 to 96 (3176)
+Change Prec (success): 96 to 128 (3587)
+numSteps = 4022
+numSteps = 60
+numSteps = 15
+numSteps = 4
+numSteps = 1
+numSteps = 1
+numSteps = 1
+numSteps = 1
+numSteps = 1
+numSteps = 1
+numSteps = 1
+numSteps = 1
+numSteps = 1
+numSteps = 1
+numSteps = 1
+numSteps = 1
+numSteps = 1
+numSteps = 1
+
+Ending with
+time: <0.0000000000e0 0.0000000000e0>
+Point: <0.186212591830457e0 0.976481628131968e-1> <-0.107230441072888e0 0.361378668256462e0> 
+Orig f(Point, time):
+     <-0.677210623841623e-11 -0.983460510060629e-11> <-0.100572895402364e-11 0.331439109729225e-11> 
+||H(Point, time)||: 1.19407236124645e-11
+
+_____________________________________________________
+
+Path number 2:
+Starting with:
+time: <1.0000000000e+00 0.0000000000e+00>
+Point: <3.041369100863983e-01 2.081668171172169e-17> <-1.267706631674997e-01 -5.460882741093998e-01> 
+H(Point, time):
+     <1.249000902703301e-16 -1.110223024625157e-16> <2.478469306419750e-02 -4.465718832834319e-01> 
+
+
+Increase Prec (refine): 52 to 64 (0)
+Change Prec (success): 64 to 96 (98)
+Change Prec (success): 96 to 64 (217)
+Decrease Prec (success): 64 to 52 (228)
+Increase Prec (success): 52 to 64 (426)
+Decrease Prec (success): 64 to 52 (512)
+Increase Prec (success): 52 to 64 (722)
+Decrease Prec (success): 64 to 52 (808)
+Increase Prec (success): 52 to 64 (1018)
+Decrease Prec (success): 64 to 52 (1104)
+Increase Prec (success): 52 to 64 (1314)
+Decrease Prec (success): 64 to 52 (1400)
+Increase Prec (success): 52 to 64 (1610)
+Decrease Prec (success): 64 to 52 (1696)
+Increase Prec (success): 52 to 64 (1906)
+Decrease Prec (success): 64 to 52 (1992)
+Increase Prec (success): 52 to 64 (2202)
+Decrease Prec (success): 64 to 52 (2288)
+Increase Prec (success): 52 to 64 (2498)
+Decrease Prec (success): 64 to 52 (2584)
+Increase Prec (success): 52 to 64 (2794)
+Change Prec (success): 64 to 96 (3091)
+Change Prec (success): 96 to 128 (3502)
+Change Prec (success): 128 to 160 (4153)
+Change Prec (success): 160 to 192 (5051)
+Change Prec (success): 192 to 224 (6180)
+Change Prec (success): 224 to 256 (7545)
+Change Prec (success): 256 to 288 (9141)
+numSteps = 10001
+NOTE: Power series endgame never started!
+The maximum number of steps was reached
+
+Ending with
+time: <0.2843750060e0 0.0000000000e0>
+Point: <0.151760173414263e0 -0.261538802067598e-1> <-0.824407416525695e-1 -0.343328694732031e0> 
+Orig f(Point, time):
+     <0.569044987142618e-53 -0.160958684706411e-53> <-0.674768644231290e-54 0.250466194384735e-53> 
+||H(Point, time)||: 5.91371199480124e-54
+
+_____________________________________________________
+
+Path number 3:
+Starting with:
+time: <1.0000000000e+00 0.0000000000e+00>
+Point: <-1.520684550431991e-01 5.651322367885910e-01> <-2.650874736003186e-02 -6.070265188827171e-01> 
+H(Point, time):
+     <1.332267629550188e-15 2.220446049250313e-15> <2.478469306419750e-02 -4.465718832834327e-01> 
+
+
+Increase Prec (refine): 52 to 64 (0)
+Change Prec (success): 64 to 96 (98)
+Change Prec (success): 96 to 64 (217)
+Decrease Prec (success): 64 to 52 (228)
+Increase Prec (success): 52 to 64 (426)
+Decrease Prec (success): 64 to 52 (512)
+Increase Prec (success): 52 to 64 (722)
+Decrease Prec (success): 64 to 52 (808)
+Increase Prec (success): 52 to 64 (1018)
+Decrease Prec (success): 64 to 52 (1104)
+Increase Prec (success): 52 to 64 (1314)
+Decrease Prec (success): 64 to 52 (1400)
+Increase Prec (success): 52 to 64 (1610)
+Decrease Prec (success): 64 to 52 (1696)
+Increase Prec (success): 52 to 64 (1906)
+Decrease Prec (success): 64 to 52 (1992)
+Increase Prec (success): 52 to 64 (2202)
+Decrease Prec (success): 64 to 52 (2288)
+Increase Prec (success): 52 to 64 (2498)
+Decrease Prec (success): 64 to 52 (2584)
+Increase Prec (success): 52 to 64 (2794)
+Change Prec (success): 64 to 96 (3091)
+Change Prec (success): 96 to 128 (3489)
+Change Prec (success): 128 to 160 (4140)
+Change Prec (success): 160 to 192 (5038)
+Change Prec (success): 192 to 224 (6167)
+Change Prec (success): 224 to 256 (7532)
+Change Prec (success): 256 to 288 (9128)
+numSteps = 10001
+NOTE: Power series endgame never started!
+The maximum number of steps was reached
+
+Ending with
+time: <0.3375000060e0 0.0000000000e0>
+Point: <-0.104158613179273e0 0.383718501190949e0> <0.840338275475676e-2 -0.388060428065244e0> 
+Orig f(Point, time):
+     <0.203812429958764e-52 -0.237133956565116e-52> <-0.871865347873129e-53 0.317062586274017e-52> 
+||H(Point, time)||: 3.28831530518269e-53
+
+_____________________________________________________
+
+Path number 4:
+Starting with:
+time: <1.0000000000e+00 0.0000000000e+00>
+Point: <-1.520684550431991e-01 5.651322367885910e-01> <-1.616586686674007e-01 3.725111701200548e-01> 
+H(Point, time):
+     <1.332267629550188e-15 2.220446049250313e-15> <2.478469306419831e-02 -4.465718832834307e-01> 
+
+
+Increase Prec (refine): 52 to 64 (0)
+Increase Prec (refine): 64 to 96 (0)
+Change Prec (success): 96 to 128 (166)
+Change Prec (success): 128 to 96 (329)
+Change Prec (success): 96 to 64 (472)
+Decrease Prec (success): 64 to 52 (483)
+Increase Prec (success): 52 to 64 (681)
+Decrease Prec (success): 64 to 52 (767)
+Increase Prec (success): 52 to 64 (977)
+Decrease Prec (success): 64 to 52 (1063)
+Increase Prec (success): 52 to 64 (1273)
+Decrease Prec (success): 64 to 52 (1359)
+Increase Prec (success): 52 to 64 (1569)
+Decrease Prec (success): 64 to 52 (1655)
+Increase Prec (success): 52 to 64 (1865)
+Decrease Prec (success): 64 to 52 (1951)
+Increase Prec (success): 52 to 64 (2161)
+Decrease Prec (success): 64 to 52 (2247)
+Increase Prec (success): 52 to 64 (2457)
+Decrease Prec (success): 64 to 52 (2543)
+Increase Prec (success): 52 to 64 (2745)
+Change Prec (success): 64 to 96 (3040)
+Change Prec (success): 96 to 128 (3436)
+Change Prec (success): 128 to 160 (4085)
+Change Prec (success): 160 to 192 (4970)
+Change Prec (success): 192 to 224 (6086)
+Change Prec (success): 224 to 256 (7449)
+Change Prec (success): 256 to 288 (9043)
+numSteps = 10001
+NOTE: Power series endgame never started!
+The maximum number of steps was reached
+
+Ending with
+time: <0.4640625055e0 0.0000000000e0>
+Point: <-0.191885148147539e0 0.388439324100498e0> <-0.337051877045626e-1 0.119456930886964e0> 
+Orig f(Point, time):
+     <-0.472718687115970e-21 -0.388326236516116e-21> <0.131719790101425e-21 0.124474516573320e-21> 
+||H(Point, time)||: 6.11768112208717e-22
+
+_____________________________________________________
+
+Path number 5:
+Starting with:
+time: <1.0000000000e+00 0.0000000000e+00>
+Point: <-1.520684550431991e-01 5.651322367885910e-01> <1.881674160274326e-01 2.345153487626621e-01> 
+H(Point, time):
+     <1.332267629550188e-15 2.220446049250313e-15> <2.478469306419873e-02 -4.465718832834316e-01> 
+
+
+Increase Prec (refine): 52 to 64 (0)
+Increase Prec (refine): 64 to 96 (0)
+Change Prec (success): 96 to 128 (166)
+Change Prec (success): 128 to 96 (329)
+Change Prec (success): 96 to 64 (472)
+Decrease Prec (success): 64 to 52 (483)
+Increase Prec (success): 52 to 64 (681)
+Decrease Prec (success): 64 to 52 (767)
+Increase Prec (success): 52 to 64 (977)
+Decrease Prec (success): 64 to 52 (1063)
+Increase Prec (success): 52 to 64 (1273)
+Decrease Prec (success): 64 to 52 (1359)
+Increase Prec (success): 52 to 64 (1569)
+Decrease Prec (success): 64 to 52 (1655)
+Increase Prec (success): 52 to 64 (1865)
+Decrease Prec (success): 64 to 52 (1951)
+Increase Prec (success): 52 to 64 (2161)
+Decrease Prec (success): 64 to 52 (2247)
+Increase Prec (success): 52 to 64 (2457)
+Decrease Prec (success): 64 to 52 (2543)
+Increase Prec (success): 52 to 64 (2753)
+Change Prec (success): 64 to 96 (3050)
+Change Prec (success): 96 to 128 (3446)
+Change Prec (success): 128 to 160 (4095)
+Change Prec (success): 160 to 192 (4980)
+Change Prec (success): 192 to 224 (6096)
+Change Prec (success): 224 to 256 (7459)
+Change Prec (success): 256 to 288 (9053)
+numSteps = 10001
+NOTE: Power series endgame never started!
+The maximum number of steps was reached
+
+Ending with
+time: <0.4437500055e0 0.0000000000e0>
+Point: <-0.203635981564270e0 0.386735518939470e0> <-0.203361642664843e-1 0.281578216521921e0> 
+Orig f(Point, time):
+     <-0.491711925347179e-43 -0.162596887585832e-43> <0.395030463227366e-43 -0.184873972067815e-43> 
+||H(Point, time)||: 5.17898026044924e-44
+
+_____________________________________________________
+
+Path number 6:
+Starting with:
+time: <1.0000000000e+00 0.0000000000e+00>
+Point: <-1.520684550431992e-01 -5.651322367885913e-01> <1.881674160274324e-01 -2.345153487626618e-01> 
+H(Point, time):
+     <-6.661338147750939e-16 -2.220446049250313e-16> <2.478469306419803e-02 -4.465718832834321e-01> 
+
+
+Increase Prec (refine): 52 to 64 (0)
+Increase Prec (refine): 64 to 96 (0)
+Change Prec (success): 96 to 128 (166)
+Change Prec (success): 128 to 96 (329)
+Change Prec (success): 96 to 64 (472)
+Decrease Prec (success): 64 to 52 (483)
+Increase Prec (success): 52 to 64 (681)
+Decrease Prec (success): 64 to 52 (767)
+Increase Prec (success): 52 to 64 (977)
+Decrease Prec (success): 64 to 52 (1063)
+Increase Prec (success): 52 to 64 (1273)
+Decrease Prec (success): 64 to 52 (1359)
+Increase Prec (success): 52 to 64 (1569)
+Decrease Prec (success): 64 to 52 (1655)
+Increase Prec (success): 52 to 64 (1865)
+Decrease Prec (success): 64 to 52 (1951)
+Increase Prec (success): 52 to 64 (2161)
+Decrease Prec (success): 64 to 52 (2247)
+Increase Prec (success): 52 to 64 (2457)
+Decrease Prec (success): 64 to 52 (2543)
+Increase Prec (success): 52 to 64 (2761)
+Change Prec (success): 64 to 96 (3071)
+Change Prec (success): 96 to 128 (3482)
+Change Prec (success): 128 to 160 (4146)
+Change Prec (success): 160 to 192 (5046)
+Change Prec (success): 192 to 224 (6177)
+Change Prec (success): 224 to 256 (7555)
+numSteps = 8680
+Change Prec (success): 256 to 96 (16)
+numSteps = 35
+numSteps = 7
+numSteps = 3
+numSteps = 1
+numSteps = 1
+numSteps = 1
+numSteps = 1
+numSteps = 1
+numSteps = 1
+numSteps = 1
+numSteps = 1
+numSteps = 1
+numSteps = 1
+numSteps = 1
+numSteps = 1
+numSteps = 1
+numSteps = 1
+
+Ending with
+time: <0.0000000000e0 0.0000000000e0>
+Point: <-0.124642330068923e0 -0.371513097966742e0> <0.144842608530756e0 -0.131713537528360e0> 
+Orig f(Point, time):
+     <0.730618280497295e-11 -0.581949952835255e-11> <-0.973933586770137e-12 0.738085184459353e-11> 
+||H(Point, time)||: 9.34060393872784e-12
+
+_____________________________________________________
+
+Path number 7:
+Starting with:
+time: <1.0000000000e+00 0.0000000000e+00>
+Point: <-1.520684550431992e-01 -5.651322367885913e-01> <-2.650874736003020e-02 6.070265188827146e-01> 
+H(Point, time):
+     <-6.661338147750939e-16 -2.220446049250313e-16> <2.478469306421660e-02 -4.465718832834141e-01> 
+
+
+Increase Prec (refine): 52 to 64 (0)
+Change Prec (success): 64 to 96 (98)
+Change Prec (success): 96 to 64 (217)
+Decrease Prec (success): 64 to 52 (228)
+Increase Prec (success): 52 to 64 (426)
+Decrease Prec (success): 64 to 52 (512)
+Increase Prec (success): 52 to 64 (722)
+Decrease Prec (success): 64 to 52 (808)
+Increase Prec (success): 52 to 64 (1018)
+Decrease Prec (success): 64 to 52 (1104)
+Increase Prec (success): 52 to 64 (1322)
+Decrease Prec (success): 64 to 52 (1408)
+Increase Prec (success): 52 to 64 (1626)
+Decrease Prec (success): 64 to 52 (1712)
+Increase Prec (success): 52 to 64 (1930)
+Decrease Prec (success): 64 to 52 (2016)
+Increase Prec (success): 52 to 64 (2234)
+Decrease Prec (success): 64 to 52 (2320)
+Increase Prec (success): 52 to 64 (2538)
+Decrease Prec (success): 64 to 52 (2624)
+Increase Prec (success): 52 to 64 (2842)
+Change Prec (success): 64 to 96 (3152)
+Change Prec (success): 96 to 128 (3565)
+numSteps = 4007
+numSteps = 16
+numSteps = 4
+numSteps = 1
+numSteps = 1
+numSteps = 1
+numSteps = 1
+numSteps = 1
+numSteps = 1
+numSteps = 1
+numSteps = 1
+numSteps = 1
+numSteps = 1
+numSteps = 1
+numSteps = 1
+numSteps = 1
+numSteps = 1
+numSteps = 1
+
+Ending with
+time: <0.0000000000e0 0.0000000000e0>
+Point: <-0.616620653872565e-1 -0.420964797155935e0> <-0.374744705733144e-1 0.414433583626152e0> 
+Orig f(Point, time):
+     <-0.286552906113752e-11 -0.795647708531972e-11> <-0.410289334873446e-11 0.330684508513546e-11> 
+||H(Point, time)||: 8.45675968734133e-12
+
+_____________________________________________________
+
+Path number 8:
+Starting with:
+time: <1.0000000000e+00 0.0000000000e+00>
+Point: <-1.520684550431992e-01 -5.651322367885913e-01> <-1.616586686674006e-01 -3.725111701200552e-01> 
+H(Point, time):
+     <-6.661338147750939e-16 -2.220446049250313e-16> <2.478469306419800e-02 -4.465718832834322e-01> 
+
+
+Increase Prec (refine): 52 to 64 (0)
+Increase Prec (refine): 64 to 96 (0)
+Change Prec (success): 96 to 128 (166)
+Change Prec (success): 128 to 96 (329)
+Change Prec (success): 96 to 64 (472)
+Decrease Prec (success): 64 to 52 (483)
+Increase Prec (success): 52 to 64 (681)
+Decrease Prec (success): 64 to 52 (767)
+Increase Prec (success): 52 to 64 (977)
+Decrease Prec (success): 64 to 52 (1063)
+Increase Prec (success): 52 to 64 (1273)
+Decrease Prec (success): 64 to 52 (1359)
+Increase Prec (success): 52 to 64 (1569)
+Decrease Prec (success): 64 to 52 (1655)
+Increase Prec (success): 52 to 64 (1865)
+Decrease Prec (success): 64 to 52 (1951)
+Increase Prec (success): 52 to 64 (2161)
+Decrease Prec (success): 64 to 52 (2247)
+Increase Prec (success): 52 to 64 (2457)
+Decrease Prec (success): 64 to 52 (2543)
+Increase Prec (success): 52 to 64 (2753)
+Change Prec (success): 64 to 96 (3050)
+Change Prec (success): 96 to 128 (3448)
+Change Prec (success): 128 to 160 (4099)
+Change Prec (success): 160 to 192 (4997)
+Change Prec (success): 192 to 224 (6126)
+Change Prec (success): 224 to 256 (7491)
+Change Prec (success): 256 to 288 (9087)
+numSteps = 10001
+NOTE: Power series endgame never started!
+The maximum number of steps was reached
+
+Ending with
+time: <0.3656250055e0 0.0000000000e0>
+Point: <-0.424249099689550e-1 -0.384349059634992e0> <-0.137137919258557e0 -0.264282145222073e0> 
+Orig f(Point, time):
+     <0.636027721270418e-24 -0.186920440515011e-23> <0.336368175484525e-24 0.167987623687681e-24> 
+||H(Point, time)||: 1.97445090353167e-24
+
+_____________________________________________________
+Number of failures:  5
+Number of successes:  4
+Number of paths:  9
+Parse Time = 0.030000s
+Track Time = 8.260000s
