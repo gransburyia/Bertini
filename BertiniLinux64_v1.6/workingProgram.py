@@ -7,7 +7,6 @@ Created on Fri May 24 12:46:50 2019
 #Constants in the program
 import subprocess
 import random
-import os.path
 
 a = "0"
 
@@ -150,31 +149,23 @@ def writeStart(finalSol):
 def runBertini(txtFile, startFile = "none"): #will run Bertini with the file as input
     if (startFile == "none"):
         bertiniPath = r'./bertini'
-        subprocess.call([bertiniPath, txtFile])
+        subprocess.call([bertiniPath, txtFile], stdout=subprocess.PIPE)
     else: 
         bertiniPath = r'./bertini'
         subprocess.call([bertiniPath, txtFile, startFile])
 
-def readInSolutions(listOfSolutions, nValue):
-    lines = []
-    if(os.path.exists("main_data")):
-        inputFile = open("main_data", "r")
-        if inputFile.mode == 'r':
-            temp = "null"
-            while(temp != ""):
-                temp = inputFile.readline()
-                if(temp.find("Cycle number") != -1):
-                    for i in range(0, nValue, ):
-                        temp = inputFile.readline()
-                        lines.append(temp)
-        for j in lines:
-            if j == "\n":
-                lines.remove(j)
-        for k in range(0, len(lines)):
-            listOfSolutions.append(lines[k])
-
 def readInSolutionsFinite(listOfSolutions, nValue):
     inputFile = open("finite_solutions", "r")
+    if inputFile.mode == 'r':
+        lines = inputFile.readlines()
+    for j in lines:
+        if j == "\n":
+            lines.remove(j)
+    for k in range(1, len(lines)):
+        listOfSolutions.append(lines[k])
+
+def readInSolutionsNon(listOfSolutions, nValue):
+    inputFile = open("nonsingular_solutions", "r")
     if inputFile.mode == 'r':
         lines = inputFile.readlines()
     for j in lines:
@@ -210,22 +201,6 @@ def fixSolutions(listOfSolutions):
         fixedSolutions.append(newSolution)
     return fixedSolutions
 
-def filterSolutions(listOfSolutions, nValue):
-    newList = []
-    for i in range(0, len(listOdSolutions), nVlaue):
-        lastIndex = i + nValue - 1
-        if (abs(calculatingMag(listOfSolutions[i] - calculatingMag(listOfSolutions[lastIndex])) < 10 ** -8)):
-            for j in range(i, lastIndex + 1):
-                newList.append(listOfSolutions[j])
-    return newList
-
-def calculatingMag(string):
-    string.replace("\n", "")
-    splitSolutions = string.split()
-    real = float(splitSolutions[0])
-    imaginary = float(splitSolutions[1])
-    return cmath.sqrt((real ** 2) + (imaginary ** 2))
-
 def makeVariableString(nValue):
     variableString = ""
     for i in range(1, nValue + 1):
@@ -253,7 +228,10 @@ def writeEquations(nValue, fileObject):
 
 """
 main
+
 """
+
+n = 3
 
 dNSol = []
 ssSol=[]

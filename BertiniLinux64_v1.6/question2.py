@@ -7,20 +7,19 @@ Created on Fri May 24 12:46:50 2019
 #Constants in the program
 import subprocess
 import random
+import cmath
 import os.path
 
 a = "0"
 
 b = "1"
 
-alpha = "1/2"
+alpha = "0"
 
-beta = "1/3"
-
-n = 2
+beta = "0"
 
 #function in format bertini will understand
-p = "2 * y^3"
+p = "-2 * ( 1 + y ^ 2 )"
 
 def writeD1():#v stands for variables, funcs stands for the amount of functions
 
@@ -90,6 +89,12 @@ def makeHomotopyFile(nValue):
 
     hFile.write("USERHOMOTOPY: 1;\n\n")
 
+    hFile.write("TRACKTOLBEFOREEG: 1e-8;\n\n")
+
+    hFile.write("DEGREEBOUND: 2;\n\n")
+
+    hFile.write("COEFFBOUND: 2.5;\n\n")
+
     hFile.write("END;\n\n")
 
     hFile.write("INPUT\n\n")
@@ -102,9 +107,9 @@ def makeHomotopyFile(nValue):
 
     hFile.write("parameter s;\n\n")
 
-    hFile.write("constant a, b, alpha, beta, n;\n\n")
-
-    hFile.write("random gamma;\n\n")
+    hFile.write("constant gamma, a, b, alpha, beta, n;\n\n")
+    
+    hFile.write("gamma = .2 + I * .5;\n\n") 
 
     hFile.write("alpha = " + alpha + ";\n\n")
                                                      
@@ -150,30 +155,24 @@ def writeStart(finalSol):
 def runBertini(txtFile, startFile = "none"): #will run Bertini with the file as input
     if (startFile == "none"):
         bertiniPath = r'./bertini'
-        subprocess.call([bertiniPath, txtFile])
+        subprocess.call([bertiniPath, txtFile], stdout=subprocess.PIPE)
     else: 
         bertiniPath = r'./bertini'
         subprocess.call([bertiniPath, txtFile, startFile])
 
-def readInSolutions(listOfSolutions, nValue):
-    lines = []
+def readInSolutions(listOfSolutions, numSol):
     if(os.path.exists("main_data")):
         inputFile = open("main_data", "r")
         if inputFile.mode == 'r':
             temp = "null"
-            while(temp != ""):
+            while(temp != ''):
                 temp = inputFile.readline()
                 if(temp.find("Cycle number") != -1):
-                    for i in range(0, nValue, ):
+                    for i in range(0, numSol):
                         temp = inputFile.readline()
-                        lines.append(temp)
-        for j in lines:
-            if j == "\n":
-                lines.remove(j)
-        for k in range(0, len(lines)):
-            listOfSolutions.append(lines[k])
+                        listOfSolutions.append(temp)
 
-def readInSolutionsFinite(listOfSolutions, nValue):
+def readInSolutionsFinite(listOfSolutions):
     inputFile = open("finite_solutions", "r")
     if inputFile.mode == 'r':
         lines = inputFile.readlines()
@@ -181,6 +180,7 @@ def readInSolutionsFinite(listOfSolutions, nValue):
         if j == "\n":
             lines.remove(j)
     for k in range(1, len(lines)):
+        print("Solution from startSystem.txt: ", lines[k])
         listOfSolutions.append(lines[k])
         
 def combineSolutions(yN, ssSol, finalSol, nValue):
@@ -210,21 +210,27 @@ def fixSolutions(listOfSolutions):
         fixedSolutions.append(newSolution)
     return fixedSolutions
 
-def filterSolutions(listOfSolutions, nValue):
+def filterSolutions(stringList,listOfSolutions, nValue):
     newList = []
-    for i in range(0, len(listOdSolutions), nVlaue):
+    for i in range(0, len(listOfSolutions), nValue):
         lastIndex = i + nValue - 1
-        if (abs(calculatingMag(listOfSolutions[i] - calculatingMag(listOfSolutions[lastIndex])) < 10 ** -8)):
+        if (abs(calculatingMag(listOfSolutions[i]) - calculatingMag(listOfSolutions[lastIndex])) < 10 ** -8):
             for j in range(i, lastIndex + 1):
-                newList.append(listOfSolutions[j])
+                newList.append(stringList[j])
     return newList
 
-def calculatingMag(string):
-    string.replace("\n", "")
-    splitSolutions = string.split()
-    real = float(splitSolutions[0])
-    imaginary = float(splitSolutions[1])
-    return cmath.sqrt((real ** 2) + (imaginary ** 2))
+def calculatingMag(number):
+    return cmath.sqrt((number.real ** 2) + (number.imag ** 2))
+
+def convertToComplex(listOfStrings):
+    newList = []
+    for i in listOfStrings:
+        splitString = i.split()
+        real = float(splitString[0])
+        imaginary = float(splitString[1])
+        complexNumber = complex(real, imaginary)
+        newList.append(complexNumber)
+    return newList 
 
 def makeVariableString(nValue):
     variableString = ""
@@ -249,48 +255,64 @@ def writeEquations(nValue, fileObject):
     Y_1Equation = p.replace("y", "y" + str(nValue))
     fileObject.write("f" + str(nValue -1) + " = (gamma_t) * (y" + str(nValue - 1) + " - 2 * y" + str(nValue) + ") + y_1 - (h_t) ^ 2 *(" + Y_1Equation + ");\n")
     Y_2Equation = p.replace("y", "y" + str(nValue + 1))
-    fileObject.write("f" + str(nValue) + " = (gamma_t) * (y" + str(nValue) + " - 2 * y" + str(nValue + 1) + " + beta) - (h_t) ^ 2 * (" + Y_2Equation + ");\n\n") 
+    fileObject.write("f" + str(nValue) + " = (gamma_t) * (y" + str(nValue) + " - 2 * y" + str(nValue + 1) + " + beta) - (h_t) ^ 2 * (" + Y_2Equation + ");\n\n")
+
+def saveFiles(nValue):
+    fileName = "FilesForInstance" + str(nValue)
+    subprocess.call(["mkdir", fileName])
+    startString = "start" + str(nValue) + ".txt"
+    subprocess.call(["mv", "start.txt", startString])
+    homString = "homotopy" + str(nValue) + ".txt"
+    subprocess.call(["mv", "homotopy.txt", homString])
 
 """
 main
 """
+
+n = 3
 
 dNSol = []
 ssSol=[]
 finalSol = []
 writeD1()
 runBertini("d1Python.txt")
-readInSolutionsFinite(dNSol, 1)
+readInSolutions(dNSol, 1)
 fixedSolutionsDN = fixSolutions(dNSol)
 for j in range(0, len(fixedSolutionsDN)):
     writeSS(fixedSolutionsDN[j], 1)
     runBertini("startSystem.txt")
-    readInSolutionsFinite(ssSol, 1)
+    readInSolutionsFinite(ssSol)
     finalSol = combineSolutions(dNSol[j], ssSol, finalSol, 1)
     ssSol = []
 writeStart(finalSol)
 makeHomotopyFile(1)
 runBertini("homotopy.txt", "start.txt")
+#saveFiles(1)
 print("This is iteration 1")
 
 #When n is more than 1"
-
 for nValue in range(2, n+1):
 
     dNSol = []
     ssSol = []
     finalSol = []
-    readInSolutionsNon(dNSol, nValue)
+    readInSolutions(dNSol, nValue)
+    tempdNSol = convertToComplex(dNSol)
+    dNSol = filterSolutions(dNSol, tempdNSol, nValue)
+    for i in range(0, len(dNSol), nValue):
+        print("This is dNSol with filtering: ", dNSol[i])
     fixedSolutionsDN = fixSolutions(dNSol)
     for k in range(nValue -1, len(fixedSolutionsDN), nValue):
+        print("This is dNSol yN: ", dNSol[k])
+        print("this is fixedSolutionsDN yN, ", fixedSolutionsDN[k])
         writeSS(fixedSolutionsDN[k], nValue)
         runBertini("startSystem.txt")
-        readInSolutionsFinite(ssSol, nValue)
+        readInSolutionsFinite(ssSol)
         finalSol = combineSolutions(dNSol[k], ssSol, finalSol, nValue)
         ssSol = []
     writeStart(finalSol)
     makeHomotopyFile(nValue)
     runBertini("homotopy.txt", "start.txt")
+    saveFiles(nValue)
     print("Iteration: ", nValue)
-    
     #subprocess.call(['rm', 'start.txt', 'startSystem.txt', 'homotopy.txt'])
